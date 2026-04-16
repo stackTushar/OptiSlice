@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OptiSlice | Smart Website Analytics Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Google Analytics + Google Ads (replace IDs before production) -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} 
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'AW-XXXXXXXXX');
+  </script>
+  -->
+
+  <!-- Google AdSense (replace ca-pub-XXXXXXXXXXXXXXXX) -->
+  <!--
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+    crossorigin="anonymous"></script>
+  -->
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <h1 class="brand">OptiSlice</h1>
+      <nav>
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="product.html">Product</a>
+        <a href="signup.html">Signup</a>
+        <a href="campaigns.html">Campaigns</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="reports.html">Reports</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <p class="kicker">Analytics + Conversion Optimization Suite</p>
+      <h2 id="hero-title">Turn Visitors into Customers with Data</h2>
+      <p>
+        This upgraded demo tracks sessions, funnels, campaign traffic, goals, and multiple A/B experiments.
+      </p>
+      <div class="cta-row">
+        <button id="cta-order" class="btn cta-btn">Order Now</button>
+        <button class="btn btn-ghost track-click" data-event="hero_watch_demo" data-label="watch_demo">Watch Demo</button>
+      </div>
+    </section>
+
+    <section class="container cards">
+      <article class="card">
+        <h3>Track Behavior</h3>
+        <p>Page views, events, device split, campaign source, and session activity.</p>
+      </article>
+      <article class="card">
+        <h3>Set Goals</h3>
+        <p>Measure CTA clicks, menu interaction, and final signup conversions.</p>
+      </article>
+      <article class="card">
+        <h3>Optimize Faster</h3>
+        <p>Run experiments and compare CTR across variants in dashboard charts.</p>
+      </article>
+    </section>
+
+    <section class="container panel sponsored-section">
+      <h3>Sponsored Product Ads</h3>
+      <p class="muted">These are paid placements. Clicks are tracked as ad campaign engagement.</p>
+      <div class="ad-products-grid">
+        <article class="ad-item">
+          <span class="ad-badge">Ad</span>
+          <h4>Crunchy Nacho Combo</h4>
+          <p>High-converting snack bundle promoted by partner brand.</p>
+          <a href="signup.html" class="btn btn-ghost track-click" data-event="ad_product_click" data-label="nacho_combo_ad">View Offer</a>
+        </article>
+        <article class="ad-item">
+          <span class="ad-badge">Ad</span>
+          <h4>Choco Lava Delight</h4>
+          <p>Limited dessert promotion targeted for evening campaign traffic.</p>
+          <a href="signup.html" class="btn btn-ghost track-click" data-event="ad_product_click" data-label="choco_lava_ad">View Offer</a>
+        </article>
+        <article class="ad-item">
+          <span class="ad-badge">Ad</span>
+          <h4>Zero Sugar Cool Drink</h4>
+          <p>Health-focused beverage ad tested for mobile audience conversion.</p>
+          <a href="signup.html" class="btn btn-ghost track-click" data-event="ad_product_click" data-label="cool_drink_ad">View Offer</a>
+        </article>
+        <article class="ad-item">
+          <span class="ad-badge">Ad</span>
+          <h4>Family Party Meal Box</h4>
+          <p>Premium ad placement aimed at high-value weekend orders.</p>
+          <a href="signup.html" class="btn btn-ghost track-click" data-event="ad_product_click" data-label="party_box_ad">View Offer</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="container panel quick-links">
+      <h3>Optimization Workflow</h3>
+      <div class="chips">
+        <a class="chip" href="campaigns.html">1. Launch Campaign</a>
+        <a class="chip" href="product.html">2. Observe Engagement</a>
+        <a class="chip" href="signup.html">3. Track Conversion</a>
+        <a class="chip" href="dashboard.html">4. Analyze Results</a>
+      </div>
+    </section>
+
+    <section class="container panel ad-panel">
+      <h3>Sponsored</h3>
+      <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+        data-ad-slot="1234567890"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Mini Project: Website Analytics & Conversion Optimization System</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

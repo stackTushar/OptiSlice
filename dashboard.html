@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OptiSlice | Analytics Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Google Analytics + Google Ads (replace IDs before production) -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'AW-XXXXXXXXX');
+  </script>
+  -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body data-page="dashboard">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <h1 class="brand">OptiSlice</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="product.html">Product</a>
+        <a href="signup.html">Signup</a>
+        <a href="campaigns.html">Campaigns</a>
+        <a href="dashboard.html" aria-current="page">Dashboard</a>
+        <a href="reports.html">Reports</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel filters">
+      <h2>Analytics Control Center</h2>
+      <div class="filter-row">
+        <label>
+          Time Window
+          <select id="filter-window">
+            <option value="7">Last 7 days</option>
+            <option value="30" selected>Last 30 days</option>
+            <option value="all">All Time</option>
+          </select>
+        </label>
+        <label>
+          Source
+          <select id="filter-source">
+            <option value="all">All Sources</option>
+          </select>
+        </label>
+      </div>
+    </section>
+
+    <section class="panel metrics-grid">
+      <article class="metric-card">
+        <h3>Sessions</h3>
+        <p id="m-sessions">0</p>
+      </article>
+      <article class="metric-card">
+        <h3>Returning Sessions</h3>
+        <p id="m-returning">0</p>
+      </article>
+      <article class="metric-card">
+        <h3>Conversions</h3>
+        <p id="m-signups">0</p>
+      </article>
+      <article class="metric-card">
+        <h3>Conversion Rate</h3>
+        <p id="m-conversion">0%</p>
+      </article>
+    </section>
+
+    <section class="panel chart-grid">
+      <article>
+        <h2>Traffic Sources</h2>
+        <canvas id="trafficChart" height="150"></canvas>
+      </article>
+      <article>
+        <h2>Daily Session Trend</h2>
+        <canvas id="dailyChart" height="150"></canvas>
+      </article>
+    </section>
+
+    <section class="panel chart-grid">
+      <article>
+        <h2>Funnel Overview</h2>
+        <canvas id="funnelChart" height="150"></canvas>
+      </article>
+      <article>
+        <h2>Experiment CTR Comparison</h2>
+        <canvas id="experimentChart" height="150"></canvas>
+        <p id="ab-summary" class="muted"></p>
+      </article>
+    </section>
+
+    <section class="panel table-grid">
+      <article>
+        <h2>Top Pages</h2>
+        <ul id="top-pages" class="top-pages"></ul>
+      </article>
+      <article>
+        <h2>Top Events</h2>
+        <ul id="top-events" class="top-pages"></ul>
+      </article>
+    </section>
+
+    <section class="panel">
+      <h2>Recent Activity</h2>
+      <ul id="recent-events" class="top-pages"></ul>
+    </section>
+
+    <section class="panel actions">
+      <button id="export-csv" class="btn">Export Event CSV</button>
+      <button id="seed-data" class="btn btn-ghost">Seed Demo Data</button>
+      <button id="clear-data" class="btn btn-danger">Reset Demo Data</button>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OptiSlice | Campaign Lab</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Google Analytics + Google Ads (replace IDs before production) -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'AW-XXXXXXXXX');
+  </script>
+  -->
+  <!-- Google AdSense (replace ca-pub-XXXXXXXXXXXXXXXX) -->
+  <!--
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+    crossorigin="anonymous"></script>
+  -->
+</head>
+<body data-page="campaigns">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <h1 class="brand">OptiSlice</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="product.html">Product</a>
+        <a href="signup.html">Signup</a>
+        <a href="campaigns.html" aria-current="page">Campaigns</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="reports.html">Reports</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>Campaign Builder (UTM)</h2>
+      <p>Create trackable URLs for social and paid campaigns.</p>
+      <form id="utm-form" class="signup-form">
+        <label for="utm-source">UTM Source</label>
+        <input id="utm-source" value="instagram" required />
+
+        <label for="utm-medium">UTM Medium</label>
+        <input id="utm-medium" value="cpc" required />
+
+        <label for="utm-campaign">UTM Campaign</label>
+        <input id="utm-campaign" value="summer_launch" required />
+
+        <button type="submit" class="btn">Generate Link</button>
+      </form>
+      <p id="utm-result" class="muted"></p>
+      <button id="copy-utm" class="btn btn-ghost" hidden>Copy Link</button>
+    </section>
+
+    <section class="panel">
+      <h2>Traffic Simulation</h2>
+      <p>Open these links to generate campaign sessions and compare performance.</p>
+      <div class="chips">
+        <a class="chip" href="index.html?utm_source=google&utm_medium=cpc&utm_campaign=search_boost">Google Search Campaign</a>
+        <a class="chip" href="index.html?utm_source=instagram&utm_medium=social&utm_campaign=reel_drop">Instagram Reel Campaign</a>
+        <a class="chip" href="index.html?utm_source=facebook&utm_medium=social&utm_campaign=lookalike_push">Facebook Lookalike Campaign</a>
+        <a class="chip" href="index.html?utm_source=email&utm_medium=newsletter&utm_campaign=retention_drive">Email Retention Campaign</a>
+      </div>
+    </section>
+
+    <section class="panel ad-panel">
+      <h3>Sponsored</h3>
+      <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+        data-ad-slot="1234567890"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

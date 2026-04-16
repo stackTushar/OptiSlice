@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OptiSlice | Product</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Google Analytics + Google Ads (replace IDs before production) -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} 
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'AW-XXXXXXXXX');
+  </script>
+  -->
+  <!-- Google AdSense (replace ca-pub-XXXXXXXXXXXXXXXX) -->
+  <!--
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+    crossorigin="anonymous"></script>
+  -->
+</head>
+<body data-page="product">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <h1 class="brand">OptiSlice</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="product.html" aria-current="page">Product</a>
+        <a href="signup.html">Signup</a>
+        <a href="campaigns.html">Campaigns</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="reports.html">Reports</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>Popular Menu</h2>
+      <p>Track what users inspect before purchase and signup.</p>
+      <div class="grid-2">
+        <article class="card">
+          <h3>Classic Margherita</h3>
+          <p>Simple, fresh, and best-selling item.</p>
+          <button class="btn track-click" data-event="product_view_details" data-label="margherita">View Details</button>
+        </article>
+        <article class="card">
+          <h3>Farmhouse Supreme</h3>
+          <p>Loaded toppings for high-value customers.</p>
+          <button class="btn track-click" data-event="product_view_details" data-label="farmhouse">View Details</button>
+        </article>
+        <article class="card">
+          <h3>Peri-Peri Veggie</h3>
+          <p>Spicy selection preferred by mobile visitors.</p>
+          <button class="btn track-click" data-event="product_view_details" data-label="peri_peri">View Details</button>
+        </article>
+        <article class="card">
+          <h3>BBQ Paneer Burst</h3>
+          <p>Premium option often clicked from paid campaigns.</p>
+          <button class="btn track-click" data-event="product_view_details" data-label="bbq_paneer">View Details</button>
+        </article>
+      </div>
+      <div class="cta-row">
+        <a href="signup.html" class="btn">Proceed to Signup</a>
+      </div>
+    </section>
+
+    <section class="panel sponsored-section">
+      <h3>Partner Sponsored Promotions</h3>
+      <div class="ad-products-grid">
+        <article class="ad-item">
+          <span class="ad-badge">Ad</span>
+          <h4>Spicy Wings Bucket</h4>
+          <p>Sponsored upsell item promoted during campaign periods.</p>
+          <button class="btn btn-ghost track-click" data-event="ad_product_click" data-label="spicy_wings_ad">Explore Deal</button>
+        </article>
+        <article class="ad-item">
+          <span class="ad-badge">Ad</span>
+          <h4>Cheese Burst Garlic Bread</h4>
+          <p>Cross-sell ad focused on increasing average order value.</p>
+          <button class="btn btn-ghost track-click" data-event="ad_product_click" data-label="garlic_bread_ad">Explore Deal</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel ad-panel">
+      <h3>Sponsored</h3>
+      <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+        data-ad-slot="1234567890"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
